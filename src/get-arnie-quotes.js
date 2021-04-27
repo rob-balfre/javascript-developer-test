@@ -11,7 +11,7 @@ const illBeBack = async (url) => {
 };
 
 const getArnieQuotes = async (urls) => {
-  const arniePromises = urls.map(async (url) => illBeBack(url));
+  const arniePromises = urls.map((url) => illBeBack(url));
 
   return await Promise.all(arniePromises).catch((err) => {
     console.warn(err);
